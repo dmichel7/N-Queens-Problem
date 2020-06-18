@@ -4,13 +4,13 @@ public class EightQueens
 	{
 		boolean failed = false;
 		int[][] board = {{0, 0, 0, 0, 0, 0, 0, 0},
-						 {0, 0, 0, 0, 0, 0, 0, 0},
-						 {0, 0, 0, 0, 0, 0, 0, 0},
-						 {0, 0, 0, 0, 0, 0, 0, 0},
-						 {0, 0, 0, 0, 0, 0, 0, 0},
-						 {0, 0, 0, 0, 0, 0, 0, 0},
-						 {0, 0, 0, 0, 0, 0, 0, 0},
-						 {0, 0, 0, 0, 0, 0, 0, 0},};
+				 {0, 0, 0, 0, 0, 0, 0, 0},
+				 {0, 0, 0, 0, 0, 0, 0, 0},
+				 {0, 0, 0, 0, 0, 0, 0, 0},
+				 {0, 0, 0, 0, 0, 0, 0, 0},
+				 {0, 0, 0, 0, 0, 0, 0, 0},
+				 {0, 0, 0, 0, 0, 0, 0, 0},
+				 {0, 0, 0, 0, 0, 0, 0, 0},};
 		
 		int queensToPlace = n;
 		
@@ -81,60 +81,60 @@ public class EightQueens
 		boolean safe = true;
 		
 		/* Check column if upper column safe */
-        for(int p = 0; p < 8; p++)
-        {
-        	if (board[p][col] == 1 || board[p][col] == 2) 
-            {
-            	safe = false; 
-            }
-        }
-        
-        /* Check row if safe */
-        for(int i = 0; i < 8; i++)
-        {
-        	if (board[row][i] == 1 || board[row][i] == 2) 
-            {
-            	safe = false; 
-            }
-        }
-  
-        /* Check upper left diagonal if safe */
-        for(int r = row, c = col; c >= 0 && r >= 0; c--, r--) 
-        {
-        	if (board[r][c] == 1 || board[r][c] == 2)
+        	for(int p = 0; p < 8; p++)
         	{
-        		safe = false;
-        	} 
-        }
-  
-        /* Check lower left diagonal if safe */
-        for(int k = row, m = col; m >= 0 && k < 8; k++, m--) 
-        {
-        	if (board[k][m] == 1 || board[k][m] == 2)
-        	{
-        		safe = false;
-        	} 
-        }
-        
-        /* Check upper right diagonal if safe */
-        for(int a = row, b = col; b < 8 && a >= 0; a--, b++)
-        {
-        	if(board[a][b] == 1 || board[a][b] == 2)
-        	{
-        		safe = false;
+        		if (board[p][col] == 1 || board[p][col] == 2) 
+            		{
+            			safe = false; 
+            		}
         	}
-        }
         
-        /* Check lower right diagonal if safe */
-        for(int x = row, y = col; x < 8 && y < 8; x++, y++)
-        {
-        	if(board[x][y] == 1 || board[x][y] == 2)
+        	/* Check row if safe */
+        	for(int i = 0; i < 8; i++)
         	{
-        		safe = false;
+        		if (board[row][i] == 1 || board[row][i] == 2) 
+            		{
+            			safe = false; 
+            		}
         	}
-        }
   
-        return safe; 
+        	/* Check upper left diagonal if safe */
+        	for(int r = row, c = col; c >= 0 && r >= 0; c--, r--) 
+        	{
+        		if (board[r][c] == 1 || board[r][c] == 2)
+        		{
+        			safe = false;
+        		} 
+        	}
+  
+        	/* Check lower left diagonal if safe */
+        	for(int k = row, m = col; m >= 0 && k < 8; k++, m--) 
+        	{
+        		if (board[k][m] == 1 || board[k][m] == 2)
+        		{
+        			safe = false;
+        		} 
+        	}
+        
+        	/* Check upper right diagonal if safe */
+        	for(int a = row, b = col; b < 8 && a >= 0; a--, b++)
+        	{
+        		if(board[a][b] == 1 || board[a][b] == 2)
+        		{
+        			safe = false;
+        		}
+        	}
+        
+        	/* Check lower right diagonal if safe */
+        	for(int x = row, y = col; x < 8 && y < 8; x++, y++)
+		{
+        		if(board[x][y] == 1 || board[x][y] == 2)
+        		{
+        			safe = false;
+        		}
+        	}
+  
+        	return safe; 
 	}
 	
 	boolean solve(int board[][], int col) 
@@ -175,19 +175,18 @@ public class EightQueens
 	}
 	
 	void printBoard(int board[][]) 
-    { 
+    	{ 
 		System.out.println();
-        for(int i = 0; i < 8; i++)
-        { 
-            for(int j = 0; j < 8; j++)
-            {
-            	System.out.print(" " + board[i][j] 
-                        + " "); 
-            }
-            System.out.println(); 
-        } 
-        System.out.println("\n");
-    } 
+        	for(int i = 0; i < 8; i++)
+        	{ 
+            		for(int j = 0; j < 8; j++)
+            		{
+            			System.out.print(" " + board[i][j] + " "); 
+            		}
+            		System.out.println(); 
+		} 
+        	System.out.println("\n");
+    	} 
 	
 	public static void main (String[] args)
 	{
