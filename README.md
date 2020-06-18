@@ -1,1 +1,2 @@
 # N-Queens-Problem
+This project was created for a school assignment for an algorithm analysis class. This program is a variation of the 8 queens problem in which a specified number of queens are randomly placed on the board before the algorithm attempts to solve the board. The randomly placed queen is denoted as a 2. This is done to ensure the algoritm does not overwrite the randomly placed queens and in the event of backtracking, the correct previous value on the board is used.
